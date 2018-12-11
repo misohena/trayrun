@@ -1,14 +1,14 @@
 * TrayRun - Execute windows application under task tray
 
-** ŠT—v
-WindowsƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ðƒ^ƒXƒNƒgƒŒƒC(ƒVƒXƒeƒ€ƒgƒŒƒCA’Ê’m—Ìˆæ)‰º‚ÅŽÀs‚·‚éƒvƒƒOƒ‰ƒ€‚Å‚·B
+** æ¦‚è¦
+Windowsã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã‚’ã‚¿ã‚¹ã‚¯ãƒˆãƒ¬ã‚¤(ã‚·ã‚¹ãƒ†ãƒ ãƒˆãƒ¬ã‚¤ã€é€šçŸ¥é ˜åŸŸ)ä¸‹ã§å®Ÿè¡Œã™ã‚‹ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã§ã™ã€‚
 
-”CˆÓ‚ÌƒvƒƒOƒ‰ƒ€‚ðƒ^ƒXƒNƒgƒŒƒC‰»‚Å‚«‚Ü‚·B
+ä»»æ„ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã‚’ã‚¿ã‚¹ã‚¯ãƒˆãƒ¬ã‚¤åŒ–ã§ãã¾ã™ã€‚
 
-Node.js‚Åì¬‚µ‚½ƒRƒ“ƒ\[ƒ‹ƒAƒvƒŠ(ƒT[ƒo)‚ðƒ^ƒXƒNƒgƒŒƒC‚Éí’“‚³‚¹‚é‚½‚ß‚Éì¬‚µ‚Ü‚µ‚½B
-ƒ^ƒXƒNƒo[‚ÉƒRƒ“ƒ\[ƒ‹ƒEƒBƒ“ƒhƒE‚ªo‚Á‚Ï‚È‚µ‚¾‚ÆŸT“©‚µ‚¢‚Ì‚ÅB
+Node.jsã§ä½œæˆã—ãŸã‚³ãƒ³ã‚½ãƒ¼ãƒ«ã‚¢ãƒ—ãƒª(ã‚µãƒ¼ãƒ)ã‚’ã‚¿ã‚¹ã‚¯ãƒˆãƒ¬ã‚¤ã«å¸¸é§ã•ã›ã‚‹ãŸã‚ã«ä½œæˆã—ã¾ã—ãŸã€‚
+ã‚¿ã‚¹ã‚¯ãƒãƒ¼ã«ã‚³ãƒ³ã‚½ãƒ¼ãƒ«ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ãŒå‡ºã£ã±ãªã—ã ã¨é¬±é™¶ã—ã„ã®ã§ã€‚
 
-** Žg—p—á
+** ä½¿ç”¨ä¾‹
 
 #+BEGIN_SRC sh
 trayrun /c "npm start" /title "Awesome Server" /icon app.ico
@@ -22,8 +22,8 @@ trayrun /c "notepad" /title "Background Notepad"
 trayrun /c "cmd" /title "Command Console"
 #+END_SRC
 
-** ƒIƒvƒVƒ‡ƒ“
+** ã‚ªãƒ—ã‚·ãƒ§ãƒ³
 
-- /c <string>, /cmd <string>, /command <string> :: ŽÀs‚·‚éƒvƒƒOƒ‰ƒ€‚ÌƒRƒ}ƒ“ƒhƒ‰ƒCƒ“BCreateProcess‚Ì‘æ“ñˆø”‚É“n‚³‚ê‚é•¶Žš—ñB‘æˆêˆø”‚ÍNULL
-- /title <string> :: ’Ê’mƒAƒCƒRƒ“‚ÌTip•¶Žš—ñ
-- /icon <string> :: ƒAƒCƒRƒ“ƒtƒ@ƒCƒ‹‚Ö‚ÌƒpƒX
+- /c <string>, /cmd <string>, /command <string> :: å®Ÿè¡Œã™ã‚‹ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã®ã‚³ãƒžãƒ³ãƒ‰ãƒ©ã‚¤ãƒ³ã€‚CreateProcessã®ç¬¬äºŒå¼•æ•°ã«æ¸¡ã•ã‚Œã‚‹æ–‡å­—åˆ—ã€‚ç¬¬ä¸€å¼•æ•°ã¯NULL
+- /title <string> :: é€šçŸ¥ã‚¢ã‚¤ã‚³ãƒ³ã®Tipæ–‡å­—åˆ—
+- /icon <string> :: ã‚¢ã‚¤ã‚³ãƒ³ãƒ•ã‚¡ã‚¤ãƒ«ã¸ã®ãƒ‘ã‚¹

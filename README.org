@@ -11,7 +11,7 @@ Node.jsで作成したコンソールアプリ(サーバ)をタスクトレイ�
 ** 使用例
 
 #+BEGIN_SRC sh
-trayrun /c "npm start" /title "Awesome Server" /icon app.ico
+trayrun /c "npm.cmd start" /title "Awesome Server" /icon app.ico
 #+END_SRC
 
 #+BEGIN_SRC sh

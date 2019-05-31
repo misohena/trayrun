@@ -305,6 +305,8 @@ private:
 		std::wstring cmdNotConst(cmd);
 
 		STARTUPINFO startupInfo = { sizeof(STARTUPINFO) };
+		startupInfo.dwFlags = STARTF_USESHOWWINDOW;
+		startupInfo.wShowWindow = SW_HIDE;
 		PROCESS_INFORMATION childProcessInfo = {};
 		if (!CreateProcess(NULL, cmdNotConst.data(), NULL, NULL, FALSE,
 			0,
@@ -335,7 +337,7 @@ private:
 		childWnd_ = childWnd;
 
 		// Hide child window first
-		hideChildWindow();
+//		hideChildWindow();
 	}
 
 	void hideChildWindow()

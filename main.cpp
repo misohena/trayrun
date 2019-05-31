@@ -323,7 +323,7 @@ private:
 		// Find child process's window
 		///@todo use timer?
 		HWND childWnd;
-		for (int i = 0; i < 20; ++i) {
+		for (int i = 0; i < 200; ++i) {
 			Sleep(100);
 			if (childWnd = findProcessWindow(childProcessInfo.dwProcessId)) {
 				break;

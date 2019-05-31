@@ -46,5 +46,5 @@ trayrun /c "cmd" /title "Command Console"
 
 ** ビルド方法
 
-Visual Studio 2017で trayrun.sln をビルドしてください。
+Visual Studio 2019で trayrun.sln をビルドしてください。
 

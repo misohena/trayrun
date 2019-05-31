@@ -340,11 +340,15 @@ private:
 
 	void hideChildWindow()
 	{
-		ShowWindow(childWnd_, SW_HIDE);
+		if(childWnd_){
+			ShowWindow(childWnd_, SW_HIDE);
+		}
 	}
 	void showChildWindow()
 	{
-		ShowWindow(childWnd_, SW_SHOW);
+		if(childWnd_){
+			ShowWindow(childWnd_, SW_SHOW);
+		}
 	}
 
 	virtual std::optional<LRESULT> WndProc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam) override
@@ -354,12 +358,14 @@ private:
 			// Show child window for failing to close child process.
 			showChildWindow();
 			// Try to close child process.
-			PostMessage(childWnd_, WM_CLOSE, 0, 0);
+			if(childWnd_){
+				PostMessage(childWnd_, WM_CLOSE, 0, 0);
+			}
 			return std::nullopt;
 
 		case NotifyIcon::WM_NOTIFY_ICON_BEFORE_OPEN_MENU:
-			EnableMenuItem(reinterpret_cast<HMENU>(lparam), ID_MENU_SHOW, IsWindow(childWnd_) && !IsWindowVisible(childWnd_) ? MF_ENABLED : MF_GRAYED);
-			EnableMenuItem(reinterpret_cast<HMENU>(lparam), ID_MENU_HIDE, IsWindow(childWnd_) && IsWindowVisible(childWnd_) ? MF_ENABLED : MF_GRAYED);
+			EnableMenuItem(reinterpret_cast<HMENU>(lparam), ID_MENU_SHOW, childWnd_ && IsWindow(childWnd_) && !IsWindowVisible(childWnd_) ? MF_ENABLED : MF_GRAYED);
+			EnableMenuItem(reinterpret_cast<HMENU>(lparam), ID_MENU_HIDE, childWnd_ && IsWindow(childWnd_) && IsWindowVisible(childWnd_) ? MF_ENABLED : MF_GRAYED);
 			return std::nullopt;
 		case WM_COMMAND:
 			switch (LOWORD(wparam)) {
